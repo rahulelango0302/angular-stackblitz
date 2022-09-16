@@ -20,3 +20,55 @@
 
 
 </div>
+<p>****************** below shows all the list of values of array **************</p>
+<div>
+
+<div *ngFor="let i of arr ;let sno= index">
+<div [ngStyle]="{backgroundColor: i.name==='n1' ? 'Blue':'Red'}">
+
+<!-- <div *ngIf=" sno!=3 && i.tag!='Y'">  this is an example for ngif -->
+
+
+<p>{{sno}}</p>
+<p>{{i.name}}</p>
+<p>{{i.email}}</p>
+<p>{{i.num}}</p>
+
+</div>
+</div>
+
+
+</div>
+
+<p>****************** below shows all the table of values of array **************</p>
+<div>
+
+
+<table>
+<thead>
+<tr>
+  <td>Serial Number</td>
+  <td>NAME</td>
+  <td>Email Add</td>
+  <td>Phone Number</td>
+</tr>
+</thead>
+<tbody>
+  <tr  *ngFor="let i of arr ;let sno= index">
+    <td>{{sno}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.num}}</td>
+    <button>Select the value</button>
+  </tr>
+</tbody>
+</table>
+
+<!-- <div *ngIf=" sno!=3 && i.tag!='Y'">  this is an example for ngif -->
+
+
+
+</div>
+
+
+

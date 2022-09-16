@@ -1,0 +1,22 @@
+<div>
+  <app-second [length]="len" (searchthetype)="getSearchitem($event)"></app-second>
+  <div class="button-div-color" >  
+  <button type="button" (click)="OnClick()" >filter to Y</button>
+  </div>
+  <div *ngFor="let i of arr ;let sno= index">
+<div [ngStyle]="{backgroundColor: i.name==='n1' ? 'Blue':'Red'}">
+
+<!-- <div *ngIf=" sno!=3 && i.tag!='Y'">  this is an example for ngif -->
+<div *ngIf="searchtext==i.tag">
+
+  <p>{{sno}}</p>
+  <p>{{i.name}}</p>
+  <p>{{i.email}}</p>
+  <p>{{i.num}}</p>
+  
+</div>
+</div>
+</div>
+
+
+</div>
